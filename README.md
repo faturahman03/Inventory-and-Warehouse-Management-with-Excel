@@ -1,5 +1,7 @@
 # 📦 Inventory & Warehouse Management Dashboard (Excel-Based)
 
+![Dashboard Preview](images/dataset.png)
+
 ## 🧭 Executive Summary
 This project focuses on analyzing and visualizing **Inventory & Warehouse Management** data using **Microsoft Excel** as the primary tool.  
 The dataset, sourced from **Kaggle (open source)**, contains detailed records of products, suppliers, warehouse locations, stock levels, pricing, and turnover rates.  
@@ -11,21 +13,7 @@ Through the development of an **interactive Excel dashboard** (utilizing Pivot T
 ---
 
 ## 💼 Business Problem
-Effective inventory management is crucial for maintaining operational efficiency, ensuring product availability, and minimizing holding costs.  
-However, organizations often face challenges such as:
-- Overstock situations that lead to high storage costs or product waste.
-- Stockout issues that disrupt sales and customer satisfaction.
-- Slow-moving inventory that ties up working capital.
-- Inconsistent stock levels across multiple warehouses.
-
-This project aims to address these common problems by analyzing key performance indicators (KPIs) and creating a data-driven dashboard that highlights:
-- **Total and average stock performance.**
-- **Inventory turnover efficiency.**
-- **Product expiration risk.**
-- **Stock distribution across product categories and warehouses.**
-- **Overall product status and availability.**
-
-By turning raw data into actionable insights, this analysis helps business teams make informed decisions on **reorder planning, warehouse utilization, and inventory optimization**.
+Inventory management plays a vital role in ensuring a company’s supply chain runs smoothly and efficiently. Effective inventory management is crucial for maintaining operational efficiency, ensuring product availability, and minimizing holding costs. How many products have expired and what is their financial value?
 
 ---
 
@@ -40,25 +28,8 @@ The workflow includes the following key steps:
 - **Standardized data formats**, especially date columns, using **Power Query** for consistent time-based calculations.  
 - **Created two new calculated fields:**
   - `expired_status` → derived from `Last_Order_Date` and `Expiration_Date`, indicating whether a product is expired or still active.  
-  - `total_stock` → calculated as the sum of `Stock_Quantity` and `Reorder_Quantity`, representing the complete stock count per item.
-
-### 📊 Data Analysis & Visualization
-Using **Pivot Table** and **Power Pivot**, the following metrics and visual dashboards were developed:
-- **Summary Section:**
-  - Total stock  
-  - Average turnover rate  
-  - Total expired products
-- **Stock per Category:**  
-  Bar chart showing total stock by product category.
-- **Re-stock Needed:**  
-  Identification of warehouses with the lowest stock levels (including *Bottom 10 Warehouses* insight).
-- **Inventory Turnover:**  
-  Listing of products with the lowest turnover rate and corresponding stock quantities.
-- **Product Status Overview:**  
-  Distribution of product status (Active, Discontinued, Backordered) and their percentage of total products.
-
-These visual components are designed to provide **a holistic view of warehouse performance** and allow stakeholders to quickly identify critical areas requiring attention.
-
+  - `stock_value` → calculated product of `Stock_Quantity` and `unit_price`, representing the complete stock value.
+![Dashboard Preview](images/dataset_clean.png)
 ---
 
 ## 🧠 Skills & Tools Utilized
@@ -77,14 +48,50 @@ These visual components are designed to provide **a holistic view of warehouse p
 
 ---
 
-## 📈 Results and Business Recommendations
-*(To be completed — include insights such as overstock vs stockout findings, turnover trends, and key recommendations for inventory optimization.)*
+## 📊 Results and Business Recommendations
+
+![Dashboard Preview](images/dashboard.png)
+
+### 🧾 **Results**
+The inventory dashboard highlights that the **Fruits & Vegetables** category contributes the most in terms of both stock quantity and stock value, with **18,558 units worth $90,625**.  
+Overall, total stock reaches **55,053 units valued at $332,655**, with **18,621 units requiring restock**.  
+This indicates that the category is the backbone of the inventory, thus requiring stricter management in storage, stock rotation, and restocking strategies.
+
+From the **expired product** perspective, total expired items amount to **26,945 units worth $163,859**.  
+The *Fruits & Vegetables* category alone accounts for **9,098 units (33.8%)** of the total expired stock, with a loss of **$39,885**.  
+
+Interestingly, while *Beverages* (**2,195 units, 8.1%**) and *Seafood* (**2,904 units, 10.8%**) contribute relatively small expired quantities, their losses are quite significant at **$35,182** and **$32,425**, respectively — nearly matching *Fruits & Vegetables*.  
+This indicates that even products with smaller quantities can cause substantial financial impact if their **unit value is high**, making it critical for management to monitor not only fresh goods but also **high-value categories** to minimize waste.
+
+### 💡 **Business Recommendations**
+1. **Prioritize management of the Fruits & Vegetables category**  
+   Since this category holds the largest share of both stock and value, stricter storage practices, **stock rotation (FIFO/FEFO)**, and **restocking policies** are essential to minimize expiration risk.
+2. **Implement an alert system for near-expiry products**  
+   Automated alerts in the dashboard can help warehouse and management teams take timely action — e.g., **quick discounts, promotions, or early redistribution** — to reduce potential losses.
+3. **Diversify sales strategies for critical categories**  
+   For high-margin but perishable products (e.g., **Seafood**), consider **bundling promotions** or **partnerships with retailers/restaurants** to accelerate stock turnover and improve cash flow.
 
 ---
 
 ## 🚀 Next Steps
-*(To be added later — potential improvements, such as predictive restocking, automation, or integration with supplier data.)*
+
+1. **Further Data Validation**  
+   Ensure expired data truly reflects warehouse reality by cross-checking **system vs physical stock records** to improve data reliability and decision accuracy.
+2. **Product-Level Analysis**  
+   Break down which specific items within **Fruits & Vegetables, Beverages, and Seafood** contribute most to **expiration and financial loss**, enabling targeted corrective actions.
+3. **Demand Pattern Identification**  
+   Analyze **monthly and seasonal sales trends** to better predict restocking needs and optimize inventory planning.
+4. **Financial Impact Simulation**  
+   Estimate potential **financial losses** from expired products if no stock management improvements are implemented, to quantify the cost of inaction.
+5. **Design Intervention Strategies**  
+   Develop actionable solutions such as **quick discounts**, **bundle promotions**, or **partnerships with retailers/restaurants** to reduce near-expiry inventory and improve turnover.
+6. **Enhance Dashboard with Alert System**  
+   Add **automated notifications** for products with sharp stock declines or approaching expiry dates to enable proactive inventory management.
 
 ---
 
-## 📂 Repository Structure
+## 👤 Author
+**[Faturahman]**  
+Data Analyst | Excel Dashboard Specialist | Supply Chain Optimization  
+📧 [233419245+faturahman03@users.noreply.github.com]  
+🔗 [www.linkedin.com/in/faturahman183]
