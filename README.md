@@ -50,7 +50,7 @@ The workflow includes the following key steps:
 
 ## 📊 Results and Business Recommendations
 
-![Dashboard Preview](images/dashboard.png)
+![Dashboard Preview](images/1dashboard.png)
 
 ### 🧾 **Results**
 The inventory dashboard highlights that the **Fruits & Vegetables** category contributes the most in terms of both stock quantity and stock value, with **18,558 units worth $90,625**.  
