@@ -1,8 +1,8 @@
 # 📦 Inventory & Warehouse Management Dashboard (Excel-Based)
 
 📘 **Dataset Source:**  
-Dataset of IT Job Vacancies and Requirements in the Asia-Pacific Region  
-👉 [Kaggle - BMW Worldwide Sales Records (2010–2024)](https://www.kaggle.com/datasets/ahmadrazakashif/bmw-worldwide-sales-records-20102024/data)
+A comprehensive view of grocery inventory  
+👉 [Kaggle - Grocery Inventory](https://www.kaggle.com/datasets/willianoliveiragibin/grocery-inventory)
 
 ![Dashboard Preview](images/dataset.png)
 
